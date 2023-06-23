@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aaryan - Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,10 +66,10 @@
       .leftSection {
         font-size: 2.5rem;
       }
-      .leftSection .buttons{
+      .leftSection .buttons {
         padding: 50px 0;
       }
-      .leftSection .btn{
+      .leftSection .btn {
         padding: 12px;
         background-color: rgb(36, 29, 43);
         color: white;
@@ -121,7 +121,7 @@
         height: 90px;
         width: 1px;
         background-color: white;
-        margin: 0 120px;
+        margin: 0 6vw;
       }
       .image-topH {
         width: 49px;
@@ -154,6 +154,12 @@
         top: -46px;
         left: -14px;
       }
+      .image-topC {
+        width: 41px;
+        position: relative;
+        top: -46px;
+        left: -15px;
+      }
 
       .vertical-title {
         position: relative;
@@ -171,7 +177,6 @@
 
       footer {
         background-color: rgb(50, 35, 50);
-        
       }
 
       .footer {
@@ -180,18 +185,77 @@
         justify-content: space-evenly;
       }
 
-      footer ul{
+      footer ul {
         list-style: none;
       }
 
-      .footer > div{
+      .footer > div {
         width: 220px;
       }
 
-      footer .footer-rights{
+      footer .footer-rights {
         text-align: center;
         color: grey;
         padding: 15px;
+      }
+
+      /* media query */
+      @media screen and (max-width: 1400px) {
+        .box {
+          flex-direction: column;
+        }
+        footer {
+          display: none;
+        }
+        .firstSection {
+          flex-direction: column-reverse;
+        }
+        .secondSection .vertical {
+          height: unset;
+        }
+        .vertical-title,
+        .vertical-desc {
+          left: 45px;
+        }
+        .secondSection .box {
+          width: 50vw;
+        }
+
+        nav {
+          flex-direction: column;
+        }
+
+        .leftSection {
+          width: 100% !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .rightSection {
+          width: 721px !important;
+          display: flex;
+          justify-content: center;
+        }
+        .rightSection img {
+          width: 45vw;
+          margin-bottom: 73px;
+        }
+
+        .image-topH, .image-topA, .image-topC, .image-topN, .image-topR, .image-topV{
+          top: 120px;
+        }
+        .secondSection {
+          max-width: 80vw;
+          margin: auto;
+          height: 80vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        body {
+          min-width: fit-content;
+        }
       }
     </style>
   </head>
@@ -214,8 +278,7 @@
     <main>
       <section class="firstSection">
         <div class="leftSection">
-          Hi, My name is <span class="purple">Aaryan</span>
-
+          <div>Hi, My name is <span class="purple">Aaryan</span></div>
           <div>and I'm a passionate</div>
 
           <span id="element"></span>
@@ -289,6 +352,17 @@
               quas non enim omnis odit.
             </div>
           </div>
+          <div class="vertical">
+            <img class="image-topC" src="writinglogo.png" alt="" />
+            <div class="vertical-title">Content Writer</div>
+
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              sequi doloribus mollitia possimus ullam? Eos optio minima sint
+              tempore totam, facilis consequuntur perspiciatis sapiente unde,
+              quas non enim omnis odit.
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -308,20 +382,13 @@
         </div>
         <div class="footer-third">
           <ul>
-            <li>Home</li>
-            <li>E-Mail</li>
-            <li>LinkedIn</li>
-            <li>Instagram</li>
+            <li>About</li>
+            <li>Github</li>
+            <li>Services</li>
+            <li>Donate</li>
           </ul>
         </div>
-        <div class="footer-fourth">
-          <ul>
-            <li>Home</li>
-            <li>E-Mail</li>
-            <li>LinkedIn</li>
-            <li>Instagram</li>
-          </ul>
-        </div>
+        
       </div>
       <div class="footer-rights">
         Copyright &#169;aaryansportfolio.com | All rights reserved
